@@ -26,6 +26,7 @@ public class Main {
         System.out.print("Press q/Q to terminate the program");
         while (scanner.hasNext()) {
             if ("q".equalsIgnoreCase(scanner.next())) {
+                System.out.print("Termination of the program");
                 metaConfig.close();
                 return;
             }
