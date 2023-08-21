@@ -21,14 +21,16 @@ public class Main {
 
     public static void main(String[] args) {
         final MetaConfig metaConfig = metaConfig();
-        System.out.println("Number of rows: " + metaConfig.getNames().count());
+        System.out.println("Number of rows in the database: " + metaConfig.getNames().count());
+        System.out.println("To terminate the program press: q/Q ");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Press q/Q to terminate the program");
         while (scanner.hasNext()) {
             if ("q".equalsIgnoreCase(scanner.next())) {
-                System.out.print("Termination of the program");
+                System.out.print("Termination of the program...");
                 metaConfig.close();
                 return;
+            } else {
+                System.out.print("To terminate the program press: q/Q: ");
             }
         }
     }
