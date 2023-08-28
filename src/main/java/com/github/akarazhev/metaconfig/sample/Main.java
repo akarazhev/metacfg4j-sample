@@ -38,10 +38,10 @@ public class Main {
     private static DataSource getDataSource() {
         final HikariDataSource dataSource = new HikariDataSource();
         dataSource.setDriverClassName("org.postgresql.ds.PGSimpleDataSource");
-        dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/pmon");
+        dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/postgres");
         dataSource.setMaximumPoolSize(Runtime.getRuntime().availableProcessors() * 2 + 1);
-        dataSource.addDataSourceProperty("user", "sa");
-        dataSource.addDataSourceProperty("password", "sa");
+        dataSource.addDataSourceProperty("user", "postgres2");
+        dataSource.addDataSourceProperty("password", "root");
         return dataSource;
     }
 
